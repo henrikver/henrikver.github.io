@@ -3,6 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>fetch('https://extreme-ip-lookup.com/json/')
+      .then( res => res.json())
+      .then(response => {
+          console.log("Country: ", response.country);
+       })
+       .catch((data, status) => {
+          console.log('Request failed');
+       })
+    </script>
     <script async src="https://api.beta.glia.com/salemove_integration.js"></script>
     <script>
     sm.getApi({version: 'v1'}).then(function(salemove) {
