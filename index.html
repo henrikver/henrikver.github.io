@@ -10,9 +10,9 @@
 
       engagementRequest.engagementPromise.then(function(engagement) {
         var enableRecordEvent = function(engagement) {
-          var button = document.querySelector('#record-event-button');
+          var someButton = document.querySelector('#clickable-button');
     
-          button.addEventListener('click', function() {
+          someButton.addEventListener('click', function() {
             engagement.recordEvent({message: 'Record visitor event'});
           });
         };
