@@ -4,6 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script async src="https://api.beta.glia.com/salemove_integration.js"></script>
+    <script>
+      var someButton = clickable-button;
+    sm.getApi({version: 'v1'}).then(function(salemove) {
+    var engagementRequest = salemove.requestEngagement('text');
+
+      engagementRequest.engagementPromise.then(function(engagement) {
+        var enableRecordEvent = function(engagement) {
+          var someButton = document.querySelector('#record-event-button');
+    
+          someButton.addEventListener('click', function() {
+            engagement.recordEvent({message: 'Record visitor event'});
+          });
+        };
+      });
+    });
+    </script>
     <title>Test site</title>
   </head>
   <body>
