@@ -3,21 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-		const params = new Proxy(new URLSearchParams(window.location.search), {
-			get: (searchParams, prop) => searchParams.get(prop),
-		});
-		const idToken = params.idtoken;
-		window.getGliaContext = () => ({ idToken });
-	</script>
-    <script async src="https://api.beta.glia.com/salemove_integration.js"></script>
-    <title>Test site</title>
   </head>
   <body>
     <h1>Lorem Ipsum</h1>
     <p1>Lorem ipsum dolor sit amet...</p1>
-    <form>
-      <input type="button" value="Click me" name="clickable-button">
-    </form>
   </body>
 </html>
